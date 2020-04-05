@@ -3,6 +3,15 @@
  * play.kotlinlang.org 
  */
 
+ /*
+private -> Visível apenas dentro da classe
+protected -> Funciona como o "private", mas é visível em subclasses
+public -> Visível em todo lugar, caso não seja definido é o padrão.
+internal -> Lembra o Public, mas sua visibilidade é
+restringida ao módulo, sendo então visível dentro de um
+mesmo módulo.
+*/
+
 open class instance() {
     open fun abc() {
         println("Not OK")
@@ -12,6 +21,7 @@ open class instance() {
 class objects(var m: String, var n: Int) : instance() {
     var msg: String
     var number: Int
+    internal value: Int
     /*constructor(m: String, n: Int) {
         this.msg = m
         this.number = n    
