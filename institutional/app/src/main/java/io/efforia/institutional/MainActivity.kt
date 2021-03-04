@@ -3,6 +3,7 @@ package io.efforia.institutional
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -10,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         clientes.setOnClickListener {
+            Toast.makeText(applicationContext, "Clientes foi clicado", Toast.LENGTH_LONG).show()
             val intent = Intent(this, DetalheClientesActivity::class.java)
             startActivity(intent)
         }
