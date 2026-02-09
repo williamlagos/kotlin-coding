@@ -21,7 +21,7 @@ open class instance() {
 class objects(var m: String, var n: Int) : instance() {
     var msg: String
     var number: Int
-    internal value: Int
+    internal var value: Int = 0
     /*constructor(m: String, n: Int) {
         this.msg = m
         this.number = n    
